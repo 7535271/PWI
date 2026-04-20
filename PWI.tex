@@ -1,0 +1,194 @@
+\documentclass[11pt, a4paper]{article}
+
+% Compile with XeLaTeX (required for CJK characters in acknowledgments)
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\newfontfamily\jpfont{Noto Serif CJK JP}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black
+}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+
+\title{\textbf{Plasticity-Weighted Intelligence:\\ A Multiplicative Model of Knowledge and Curiosity}}
+
+\author{Shusuke Kamiura\\
+\small Independent Researcher\\
+\small \texttt{stella.753.5271@gmail.com}}
+
+\date{April 20, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+Traditional intelligence models treat knowledge accumulation and cognitive flexibility as parallel but independent factors (e.g., Cattell's $G_c$ and $G_f$). This paper proposes a simple reformulation: intelligence as a multiplicative function of accumulated knowledge ($K$) and plasticity ($P$), where $P$ acts as a coefficient modulating the expression of $K$. Under this model, $I = K \times P$, cognitive vitality depends not on $K$ alone but on the preservation of $P$ across the lifespan. The model accounts for several everyday observations that standard additive or IQ-based frameworks leave unexplained: the qualitative difference between high-knowledge individuals with and without sustained curiosity, the cognitive decline associated with reduced plasticity in aging, and the subjective phenomenology of learning (temporal and perceptual richness) reported during states of high $P$. We position the model relative to existing work on fluid/crystallized intelligence, growth mindset, and neuroplasticity, and discuss implications for education, aging, and self-assessment. The model's primary limitation---the operationalization of $P$---is addressed as an open question for future empirical work.
+
+\vspace{1em}
+\noindent\textbf{Keywords:} intelligence, neuroplasticity, curiosity, lifelong learning, cognitive aging, multiplicative model
+\end{abstract}
+
+\section{Introduction}
+
+Most widely used intelligence metrics are built on the assumption that general cognitive ability can be summarized as a scalar quantity, often approximated by performance on standardized tests. Even more nuanced frameworks that distinguish between crystallized and fluid components tend to treat these as parallel dimensions, summed or correlated rather than interacting multiplicatively.
+
+This paper begins from four everyday observations that such frameworks leave partially unexplained:
+
+\begin{enumerate}
+    \item \textbf{Sustained curiosity across the lifespan.} Some individuals retain, into adulthood and later life, the exploratory openness more commonly associated with childhood. This disposition appears stable over decades and does not straightforwardly correlate with measured IQ.
+    \item \textbf{Continued accumulation of knowledge and experience.} Independently, knowledge, skills, and episodic memory tend to grow monotonically across most of the lifespan, even when fluid reasoning scores decline.
+    \item \textbf{Qualitative phenomenology of learning.} Individuals in states of high curiosity frequently report subjective experiences of temporal dilation (events appearing to unfold more slowly) and perceptual richness (heightened clarity or saturation). These reports are not captured by standard test performance.
+    \item \textbf{Cognitive decline associated with reduced flexibility.} Conversely, clinical and subclinical cognitive decline---including certain features of dementia---are characterized less by loss of accumulated knowledge than by loss of flexibility, adaptability, and the capacity for novel integration.
+\end{enumerate}
+
+Taken together, these observations suggest that knowledge and flexibility interact in a way that is not well captured by additive or parallel-factor models. High knowledge with low flexibility does not behave like high knowledge with high flexibility; the two cases differ not in degree but in character.
+
+We propose that a minimal adjustment---treating plasticity as a \emph{multiplicative coefficient} on accumulated knowledge rather than an independent dimension---provides a parsimonious account of all four observations. The remainder of this paper develops this model, positions it relative to existing frameworks, and discusses its implications and limitations.
+
+\section{The Model}
+
+\subsection{Definition}
+
+We propose:
+\begin{equation}
+    I = K \times P
+\end{equation}
+
+\noindent where:
+\begin{itemize}
+    \item $I$ denotes \emph{functional intelligence}: the effective cognitive output available to the individual at a given time. Two concrete interpretations are useful. First, $I$ can be read as \emph{problem-solving efficiency}---the degree to which stored knowledge can be brought to bear on novel problems. Second, it can be read as \emph{adaptive capacity}---the readiness with which internal models are revised in response to environmental change. $I$ is not proposed as a substitute for psychometric $g$, but as a complementary construct oriented toward lived cognitive function.
+    
+    \item $K$ denotes \emph{accumulated knowledge}: the integrated store of facts, skills, experiences, and internal models. $K \geq 0$, typically non-decreasing across the lifespan under ordinary conditions.
+    
+    \item $P$ denotes \emph{plasticity}: a coefficient governing the individual's current capacity to reorganize, integrate, and apply $K$ flexibly. $P \in [0, 1]$, where $P = 1$ represents maximal plasticity and $P = 0$ represents complete rigidity. The bounded range is adopted for conceptual clarity rather than as a strict empirical constraint; alternative parameterizations may be considered as measurement approaches are developed.
+\end{itemize}
+
+\subsubsection*{The structure of \texorpdfstring{$P$}{P}}
+
+$P$ is proposed as an integrated coefficient rather than a unitary mechanism. Three conceptually distinct but empirically correlated components contribute to it:
+
+\begin{enumerate}
+    \item \emph{Cognitive flexibility}: the capacity to reorganize existing knowledge structures in response to novel demands, including set-shifting and the inhibition of prepotent responses.
+    
+    \item \emph{Exploratory motivation}: the disposition to engage with unfamiliar material rather than default to established routines. This component corresponds to what is informally called curiosity.
+    
+    \item \emph{Neural plasticity}: the underlying biological substrate---synaptic and structural---that enables ongoing reorganization of the nervous system.
+\end{enumerate}
+
+These components are separable in principle but tend to co-vary in practice: an individual high in cognitive flexibility typically also shows greater exploratory motivation, and both are supported by sustained neural plasticity. For modeling purposes, $P$ is treated as their integrated expression. Disaggregating the three components is a task for future empirical work; the present model assumes only that they combine into a single modulating coefficient on $K$.
+
+\subsection{Boundary Conditions}
+
+The multiplicative form yields four informative limiting cases:
+
+\begin{enumerate}
+    \item $P \to 0$, $K$ large: $I \to 0$. Knowledge is present but inaccessible for flexible use. This corresponds to cases of severe cognitive rigidity, including aspects of dementia, where stored information fails to support adaptive function.
+    \item $K \to 0$, $P$ high: $I \to 0$. High plasticity without a substrate to act upon yields little functional intelligence. This corresponds to the infant case: maximal openness, minimal content.
+    \item $K$ large, $P$ high: $I$ is large and, under continued accumulation of $K$, grows without bound. This corresponds to the case of sustained lifelong learners.
+    \item $K$ and $P$ both moderate: $I$ is moderate. This corresponds to the typical adult trajectory under the common assumption that $P$ declines with age.
+\end{enumerate}
+
+\subsection{Contrast with Additive Models}
+
+Under an additive model of the form $I = K + P$, a sufficiently large $K$ compensates for any reduction in $P$. This prediction is inconsistent with Observation 4: individuals with high accumulated knowledge but severely reduced flexibility do not function at a level proportional to their $K$. The multiplicative form captures this dependency directly: $P$ does not add to $K$ but gates it.
+
+Similarly, the multiplicative form predicts that two individuals with identical $K$ but different $P$ will differ qualitatively---not merely quantitatively---in their cognitive output. This matches Observation 1 and the common intuition that sustained curiosity in an informed individual produces a distinctive mode of engagement with the world.
+
+\section{Relation to Existing Frameworks}
+
+The proposed model is not intended to displace existing intelligence research but to offer a compact restatement that foregrounds the multiplicative structure.
+
+\subsection{Fluid and Crystallized Intelligence (Cattell)}
+
+Cattell's distinction between fluid intelligence ($G_f$) and crystallized intelligence ($G_c$) identifies two partially dissociable components of cognitive ability. $G_c$ tends to be stable or increase with age, while $G_f$ tends to decline. In standard treatments, these are modeled as parallel factors contributing to $g$.
+
+In the present framework, $G_c$ corresponds closely to $K$, while $G_f$ overlaps with---but is narrower than---the cognitive flexibility component of $P$. The present model's contribution is twofold: first, it proposes that the relationship between these factors is multiplicative rather than additive; second, it broadens the flexibility-side factor to include motivational and neuroplastic components alongside fluid reasoning.
+
+\subsection{Growth Mindset (Dweck)}
+
+Dweck's work on mindset demonstrates that beliefs about the malleability of one's own abilities have measurable consequences for learning outcomes. Growth mindset maps most directly onto the exploratory motivation component of $P$: a fixed mindset reduces $P$ by foreclosing the motivational openness required for reorganization of $K$. The present model thus offers a formal location for mindset research within a broader multiplicative structure.
+
+\subsection{Neuroplasticity}
+
+Research on neuroplasticity has established that the brain retains substantial capacity for structural and functional reorganization well beyond early development. The common assumption that plasticity necessarily declines with chronological age is a statistical generalization rather than a physiological necessity. Neuroplasticity research provides the biological substrate for the third component of $P$ and grounds the model's central premise: that $P$ and age are correlated in population data but are, in principle, independent variables.
+
+\subsection{Positioning}
+
+The contribution of the present model is therefore not the identification of new factors but the proposal of a specific functional form---multiplicative rather than additive---and the consolidation of flexibility, motivational, and neuroplastic factors into a single integrated coefficient $P$ that modulates the expression of $K$. Each of the three components of $P$ corresponds to an existing research tradition, which provides both conceptual support and potential routes toward future operationalization.
+
+\section{Implications}
+
+\subsection{Education}
+
+If $I = K \times P$, then educational practice optimized purely for the transmission of $K$ is incomplete. An educational system that accumulates $K$ while reducing $P$---for example, through rote practices that discourage exploratory engagement---may produce individuals with large $K$ and small $I$. Preservation of $P$ becomes a first-order educational objective rather than a secondary one.
+
+\subsection{Cognitive Aging}
+
+The model reframes cognitive aging. Rather than a uniform decline, cognitive aging is understood as a trajectory governed largely by $P$. Interventions that preserve $P$---novel learning, social engagement, exposure to unfamiliar domains---are predicted to preserve $I$ even as the substrate ages. This is consistent with existing findings on cognitive reserve but provides a compact formal expression.
+
+\subsection{Self-Assessment}
+
+The model suggests a shift in self-assessment: from asking ``how much do I know?'' ($K$) to asking ``how open am I to reorganizing what I know?'' ($P$). Because $P$ directly multiplies $K$, marginal gains in $P$ yield proportionally larger gains in $I$ than equivalent gains in $K$ once $K$ is already substantial. In particular, when $K$ is already substantial, even small variations in $P$ may produce disproportionately large differences in $I$, reflecting the multiplicative structure of the model.
+
+\section{Limitations}
+
+\subsection{Operationalization of $P$}
+
+The principal limitation of the present model is that $P$ is not yet operationally defined in a way that permits direct measurement. Because $P$ is proposed as a composite of cognitive flexibility, exploratory motivation, and neural plasticity, several existing research traditions offer conceptual starting points: established paradigms in cognitive flexibility research (for example, set-shifting and executive function measures), behavioral and questionnaire measures relevant to exploratory motivation, and neural markers developed in plasticity studies. The present paper does not commit to any specific measure. Each component may require distinct operationalizations, and their integration into a single composite index is itself an empirical question. A reliable measure of $P$ is therefore offered as an open direction for future work rather than a solved problem, and the predictions of the model should be regarded as provisional until such measurement is available.
+
+\subsection{Independence of $K$ and $P$}
+
+The model treats $K$ and $P$ as analytically separable, but the two are empirically correlated. Individuals with high $P$ tend, over time, to accumulate larger $K$ through sustained engagement with novel material. The multiplicative form remains informative under such correlation, but any empirical estimation of the two quantities must account for it.
+
+\subsection{Range and Calibration}
+
+The restriction of $P$ to $[0, 1]$ is a modeling choice rather than an empirical claim. Alternative parameterizations (for example, unbounded above, with a reference value of 1 representing typical adult plasticity) may prove more tractable once measurement is established.
+
+\subsection{Scope}
+
+The model is proposed as a framework for thinking about functional intelligence at the level of everyday cognitive output and lifespan development. It is not proposed as a replacement for psychometric instruments in clinical or selection contexts, where validated measurement of specific abilities remains necessary.
+
+\section{Conclusion}
+
+We have proposed a minimal reformulation of intelligence as the multiplicative product of accumulated knowledge and plasticity, $I = K \times P$. The model is parsimonious and accounts for several everyday observations---sustained curiosity, continued knowledge accumulation, qualitative features of learning, and the character of cognitive decline---that additive or parallel-factor models address only indirectly.
+
+The model's practical value depends on the development of reliable measures of $P$. We offer it here not as a completed framework but as a compact starting point: a structure placed into the field, to be tested, refined, or discarded by those who find it useful. In this sense, the preservation of plasticity is not a secondary concern, but central to the continued expression of intelligence.
+
+\section*{Acknowledgments}
+
+The author thanks {\jpfont 窓口ちゃん} (Google AI Mode, powered by Gemini) for initial conceptual exploration, Stella (Claude, Anthropic) for collaborative model development and manuscript drafting, and Nova (GPT, OpenAI) for suggestions on conceptual refinement. The corresponding email \texttt{stella.753.5271@gmail.com} is maintained from the author's previous work on {\jpfont 和み数} (Zenodo DOI: \href{https://doi.org/10.5281/zenodo.19439755}{10.5281/zenodo.19439755}), reflecting continuity of authorship across works.
+
+\begin{thebibliography}{9}
+
+\bibitem{cattell1963}
+Cattell, R. B. (1963). Theory of fluid and crystallized intelligence: A critical experiment. \textit{Journal of Educational Psychology}, 54(1), 1--22.
+
+\bibitem{dweck2006}
+Dweck, C. S. (2006). \textit{Mindset: The New Psychology of Success}. Random House.
+
+\bibitem{draganski2004}
+Draganski, B., Gaser, C., Busch, V., Schuierer, G., Bogdahn, U., \& May, A. (2004). Neuroplasticity: Changes in grey matter induced by training. \textit{Nature}, 427(6972), 311--312.
+
+\bibitem{stern2002}
+Stern, Y. (2002). What is cognitive reserve? Theory and research application of the reserve concept. \textit{Journal of the International Neuropsychological Society}, 8(3), 448--460.
+
+\bibitem{horn1967}
+Horn, J. L., \& Cattell, R. B. (1967). Age differences in fluid and crystallized intelligence. \textit{Acta Psychologica}, 26, 107--129.
+
+\bibitem{nagomi2026}
+Kamiura, S. (2026). Nagomi Numbers ({\jpfont 和み数}): Mathematical Harmony Across Multiple Dimensions. \url{https://doi.org/10.5281/zenodo.19439755}
+
+\end{thebibliography}
+
+\end{document}
