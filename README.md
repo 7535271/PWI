@@ -30,7 +30,7 @@ intelligence, neuroplasticity, curiosity, lifelong learning, cognitive aging, mu
 
 ## Citation
 
-Kamiura, S. (2026). *Plasticity-Weighted Intelligence: A Multiplicative Model of Knowledge and Curiosity*. Zenodo. [DOI to be added after publication]
+Kamiura, S. (2026). *Plasticity-Weighted Intelligence: A Multiplicative Model of Knowledge and Curiosity*. Zenodo. https://doi.org/10.5281/zenodo.19660925
 
 ---
 
